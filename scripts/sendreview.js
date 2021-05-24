@@ -27,12 +27,11 @@ $(document).ready(function () {
 
 
         $.ajax({
-            type:"POST",
-            method:"POST",
+            type:"post",
+            // method:"POST",
             url:"review.php",
             data:$("#review-form").serialize(),
             success: function(result) {
-                alert(result);
                 alert('Success!');
                 $('.pop-back').fadeOut(1800);
             }
