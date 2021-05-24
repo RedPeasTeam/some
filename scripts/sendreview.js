@@ -28,6 +28,7 @@ $(document).ready(function () {
 
         $.ajax({
             type:"POST",
+            method:"POST",
             url:"review.php",
             data:$("#review-form").serialize(),
             success: function(result) {
