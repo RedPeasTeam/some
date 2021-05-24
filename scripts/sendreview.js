@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $("#sendMail").on("click", function () {
+    $("#sendMail").click(function() {
         if($("#email").val() === '') {
             $("#email").css("border-color", "#f00");
             return false;
@@ -25,10 +25,11 @@ $(document).ready(function () {
             $("#report").css("border-color", "#000");
         }
 
+
         $.ajax({
             type:"POST",
             url:"review.php",
-            data:$(".review-form").serialize(),
+            data:$("#review-form").serialize(),
             success: function(result) {
                 alert(result);
                 alert('Success!');

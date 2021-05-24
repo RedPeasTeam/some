@@ -19,3 +19,5 @@ $text = $email . " " . $name . " " . $phone . " " . $report . "\n";
 $file=fopen('data.txt','a+');
 fputs($file, $text);
 fclose($file);
+
+?>
