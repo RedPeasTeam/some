@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-size: 22px;
+}
+
+input {
+    font-size: 22px;
+}
+
+header {
+    height: 300px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+#head-image {
+    height: 200px;
+    background-image: url("../img/header.png");
+    background-size: cover;
+    background-position: bottom center;
+}
+
+nav {
+    width: 90%;
+    padding-bottom: 20px;
+    margin: 30px auto 20px;
+    border-bottom: 3px #00083b solid;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    padding-right: 20px;
+}
+
+header a {
+    font-size: 50px;
+    font-weight: 700;
+    color: #00083b;
+    text-decoration: none;
+    transition: all .3s linear;
+}
+
+header a:hover {
+    color: #001384;
+}
+
+#calc {
+    margin: 20px auto;
+    min-height: 350px;
+    max-width: 70vw;
+    min-width: 350px;
+    border: 1px solid #000;
+}
+
+#results {
+    background-color: #242424;
+    padding: 25px;
+    height: 175px;
+    display: grid;
+    grid-template-columns: minmax(200px, auto) 30px minmax(100px, auto);
+    grid-template-rows: repeat(3, 40px);
+    gap: 10px 0;
+    color: #ffffff;
+}
+
+#exmpl {
+    height: 100px;
+    background-color: #353535;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+}
+
+#exmpl form{
+    height: 100%;
+    width: 100%;
+}
+#exmpl input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    color: #ffffff;
+    background-color: #353535;
+    padding-left: 25px;
+}
+
+#num {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(5, auto);
+    gap: 5px;
+    background-color: #3a3a3a;
+    min-height: 175px;
+    padding: 25px;
+}
+
+#num div {
+    border: 1px solid #000;
+    border-radius: 5px;
+    text-align: center;
+    padding: 30px 0 25px 0;
+    cursor: pointer;
+    transition: .3s background-color linear;
+    user-select: none;
+
+}
+
+#num div:not([id="equal"]) {
+    background-color: #3e3e3e;
+}
+
+#num div:not([id="equal"]):hover {
+    background-color: #4a4a4a;
+}
+
+#num div:not([id="equal"]):active {
+    background-color: #2f2f2f;
+}
+
+#num div span {
+    color: #fff;
+}
+
+#equal {
+    background-color: #0c6d1a;
+    grid-column: 4/-1;
+}
+
+#equal:hover {
+    background-color: #1f782e;
+}
+
+#equal:active {
+    background-color: #093d11;
+}
+
+#review {
+    width: 70vw;
+    margin: 20px auto;
+    padding: 20px 0;
+}
+
+
+
+.pop-back {
+    display: none;
+}
+
+.pop-back:before {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    content: '';
+    left: 0;
+    top: 0;
+    opacity: 0.7;
+    z-index: 99;
+}
+
+.pop-container {
+    position: fixed;
+    width: 600px;
+    top: 10%;
+    left: 35%;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #000;
+    z-index: 999;
+    opacity: 1;
+}
+
+.pop-close {
+
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    border: 2px solid #000;
+    background: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 25px;
+    padding: 10px 25px;
+}
+
+input {
+    height: 55px;
+}
+
+.button {
+    display: block;
+    height: 55px;
+    font-weight: 500;
+    width: 250px;
+    text-align: center;
+    font-size: 25px;
+    border: 2px solid #000;
+    user-select: none;
+    cursor: pointer;
+    padding: 10px 50px;
+    outline: none;
+    color: black;
+    background: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.button-send {
+    background-color: #08b433;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.open-popup {
+    margin: 0 auto;
+    width: 300px;
+    height: 70px;
+    padding: 15px;
+}
+.open-popup:hover {
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+}
+
+.pop-close {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#course {
+    margin: 50px auto;
+    min-width: 300px;
+    max-width: 50vw;
+    background-color: #2f2f2f;
+    padding: 25px;
+}
+
+#course section {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 10px;
+}
+
+#course section:not(:last-child) {
+    border-bottom: 1px solid white;
+}
+
+@media all and (max-width: 1400px) {
+    #num div {
+        padding: 20px 0 15px 0;
+    }
+    #exmpl {
+        height: 85px;
+    }
+}
+
+@media all and (max-width: 750px) {
+    #num div {
+        padding: 10px 0 5px 0;
+    }
+    #exmpl {
+        height: 70px;
+    }
+}

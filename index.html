@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <header>
+        <div id="head-image"></div>
+        <nav>
+            <ul>
+                <li><a href="#calc">Calculator</a></li>
+                <li><a href="#review">Send review</a></li>
+                <li><a href="#course">Currency rates</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="calc">
+            <section id="results">
+                <div id="exp3"></div>
+                <div class="sign"></div>
+                <div id="res3"></div>
+                <div id="exp2"></div>
+                <div class="sign"></div>
+                <div id="res2"></div>
+                <div id="exp1"></div>
+                <div class="sign"></div>
+                <div id="res1"></div>
+            </section>
+            <section id="exmpl">
+                <form name="form" action="scripts/main.js">
+                    <input name="textview" type="text" readonly />
+                </form>
+            </section>
+            <section id="num">
+                <div class="buttonIns"><span>7</span></div>
+                <div class="buttonIns"><span>8</span></div>
+                <div class="buttonIns"><span>9</span></div>
+                <div class="buttonIns"><span>/</span></div>
+                <div class="buttonIns"><span>*</span></div>
+                <div class="buttonIns"><span>4</span></div>
+                <div class="buttonIns"><span>5</span></div>
+                <div class="buttonIns"><span>6</span></div>
+                <div class="buttonIns"><span>-</span></div>
+                <div class="buttonIns"><span>+</span></div>
+                <div class="buttonIns"><span>1</span></div>
+                <div class="buttonIns"><span>2</span></div>
+                <div class="buttonIns"><span>3</span></div>
+                <div class="buttonIns"><span>(</span></div>
+                <div class="buttonIns"><span>)</span></div>
+                <div class="buttonIns"><span>0</span></div>
+                <div id="backspace"><span>←</span></div>
+                <div id="clear"><span>С</span></div>
+                <div id="equal"><span>=</span></div>
+            </section>
+        </section>
+
+        <section id="course">
+            <section id="usd"></section>
+            <section id="eur"></section>
+            <section id="rub"></section>
+            <section id="uah"></section>
+            <section id="jpy"></section>
+        </section>
+
+        <section id="review">
+            <section class="button open-popup">Send review</section>
+
+            <section class="pop-back">
+                <section class="pop-container">
+                    <form class="review-form" action="">
+                        <input type="email" id="email" name="email" placeholder="Your email">
+                        <input type="text" id="name" name="name" placeholder="Your name">
+                        <input type="phone" id="phone" name="phone" placeholder="Your phone">
+                        <textarea name="report" id="report" placeholder="Your text" cols="30" rows="10"></textarea>
+                        <button class="button button-send" id="sendMail">Send</button>
+                    </form>
+                    <div id="message"></div>
+                    <div class="button pop-close">Leave form</div>
+                </section>
+            </section>
+        </section>
+    </main>
+
+    <script src="scripts/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="scripts/popup.js"></script>
+    <script src="scripts/sendreview.js"></script>
+    <script src="scripts/getValute.js"></script>
+</body>
+</html>
