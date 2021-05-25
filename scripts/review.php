@@ -16,7 +16,7 @@ $report = trim(urldecode($report));
 
 $text = $email . " " . $name . " " . $phone . " " . $report . "\n";
 
-$file=fopen('data.txt','a+');
+$file=fopen('../data.txt','a+');
 fputs($file, $text);
 fclose($file);
 
