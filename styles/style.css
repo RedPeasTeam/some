@@ -16,7 +16,7 @@ input {
 }
 
 header {
-    height: 300px;
+    min-height: 300px;
     width: 100%;
     margin-bottom: 50px;
 }
@@ -256,6 +256,10 @@ input {
     padding: 10px;
 }
 
+.current, .result {
+    min-width: 210px;
+}
+
 #course section:not(:last-child) {
     border-bottom: 1px solid white;
 }
@@ -269,11 +273,27 @@ input {
     }
 }
 
+@media all and (max-width: 1000px){
+    nav ul {
+        flex-direction: column;
+    }
+
+    header {
+
+    }
+}
+
 @media all and (max-width: 750px) {
     #num div {
         padding: 10px 0 5px 0;
     }
     #exmpl {
         height: 70px;
+    }
+}
+
+@media all and (max-width: 400px) {
+    nav ul li {
+        margin-bottom: 15px;
     }
 }
