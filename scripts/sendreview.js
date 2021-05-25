@@ -30,7 +30,7 @@ $(document).ready(function () {
 
         $.ajax({
             type:"POST",
-            url:"review.php",
+            url:"scripts/review.php",
             cache: false,
             data:$("#review-form").serialize(),
             success: function(result) {
